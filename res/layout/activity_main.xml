@@ -1,0 +1,126 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativelayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.encryptiontest.MainActivity" >
+
+<RelativeLayout android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/saveprivate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SaveKey" />
+
+    <Button
+        android:id="@+id/getkeybtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/saveprivate"
+        android:layout_alignBottom="@+id/saveprivate"
+        android:layout_toRightOf="@+id/saveprivate"
+        android:text="GetKey" />
+    
+    
+        <Button
+        android:id="@+id/encryptDatabtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/getkeybtn"
+        android:layout_alignBottom="@+id/getkeybtn"
+        android:layout_toRightOf="@+id/getkeybtn"
+        android:text="Encrypt" />
+        
+        
+                <Button
+        android:id="@+id/decryptDatabtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/encryptDatabtn"
+        android:layout_alignBottom="@+id/encryptDatabtn"
+        android:layout_toRightOf="@+id/encryptDatabtn"
+        android:text="Decrypt" />
+    
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/saveprivate"
+        android:layout_below="@+id/saveprivate"
+        android:text="Private Key" />
+    
+    
+    <EditText
+        android:id="@+id/privatekey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    
+      <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/privatekey"
+        android:layout_below="@+id/privatekey"
+        android:text="Public Key" />
+    
+    
+    <EditText
+        android:id="@+id/publickey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:ems="10" />
+
+          <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/publickey"
+        android:layout_below="@+id/publickey"
+        android:text="Retrieved Private Key" />
+    
+    
+    
+    <EditText
+        android:id="@+id/datatxtunencrypted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_below="@+id/textView3"
+        android:ems="10" />
+    
+    
+          <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/datatxtunencrypted"
+        android:layout_below="@+id/datatxtunencrypted"
+        android:text="Data To Encrypt" />
+    
+    
+    
+    <EditText
+        android:id="@+id/dateEditTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_below="@+id/textView4"
+        android:ems="10" />
+</RelativeLayout>
+
+</ScrollView>
